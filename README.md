@@ -13,36 +13,39 @@ This project provides a streamlined interface to access and manage contracts thr
 - Authentication and authorization mechanisms
 - Comprehensive data validation
 - Scalable architecture
-
 ## Installation
 
 ```bash
+# Create and activate virtual environment
+python -m venv .venv
+.\.venv\Scripts\activate
 
-    1. python -m venv .venv 
-    2. .\.venv\Scripts\activate
-pip install fastmcp, fastapi, uv, requests
+# Install dependencies
+pip install fastmcp fastapi uv requests
 ```
 
 ## Usage
 
 ```python
+# Set up project structure
+mkdir src
+new-item src\main.py
+uv run .\src\main.py
 
+# Testing with MCP Inspector
+# 1. Open a new terminal (Ctrl+Shift+`)
+npx @modelcontextprotocol/inspector
 
-    4. mkdir src
-    5. new-item src\main.py
-    6. uv run .\src\main.py
-    
-    7. New terminal (shortcut: Ctrl+ Shift + ` ) 
-        a. npx @modelcontextprotocol/inspector
-        
-        
-    8. Open given MCP Inspector url, select Transport type as SSE, URL as http://localhost:8000/sse and click on Connect: 
-    
-    9. Select "Tool" option and you can now test the MCP tools e.g. AddPet (select id: 10, name: MyPet, scroll down and click "Run Tool" button)
-    10. If you get "HTTP error 302: Found" error then check if can you hit swagger on the browser, sometimes public swagger are not accessible. 
+# 2. In the MCP Inspector:
+#    - Set Transport type to SSE
+#    - Set URL to http://localhost:8000/sse
+#    - Click Connect
+#    - Select "Tool" option
+#    - Test tools (e.g., AddPet with id: 10, name: MyPet)
+#    - Click "Run Tool" button
 
-    
-
+# Note: If you encounter "HTTP error 302: Found", verify the Swagger UI 
+# is accessible in your browser as some public Swagger instances may be restricted.
 ```
 
 ## Contributing
