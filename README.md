@@ -17,16 +17,31 @@ This project provides a streamlined interface to access and manage contracts thr
 ## Installation
 
 ```bash
+
     1. python -m venv .venv 
     2. .\.venv\Scripts\activate
-    3. pip install fastmcp, fastapi, uv, requests
-
+pip install fastmcp, fastapi, uv, requests
 ```
 
 ## Usage
 
 ```python
-uv run .\src\main.py
+
+
+    4. mkdir src
+    5. new-item src\main.py
+    6. uv run .\src\main.py
+    
+    7. New terminal (shortcut: Ctrl+ Shift + ` ) 
+        a. npx @modelcontextprotocol/inspector
+        
+        
+    8. Open given MCP Inspector url, select Transport type as SSE, URL as http://localhost:8000/sse and click on Connect: 
+    
+    9. Select "Tool" option and you can now test the MCP tools e.g. AddPet (select id: 10, name: MyPet, scroll down and click "Run Tool" button)
+    10. If you get "HTTP error 302: Found" error then check if can you hit swagger on the browser, sometimes public swagger are not accessible. 
+
+    
 
 ```
 
